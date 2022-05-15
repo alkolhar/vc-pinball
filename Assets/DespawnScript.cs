@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using Manager = ManagerScript;
+using Manager = Menu;
 
 public class DespawnScript : MonoBehaviour
 {

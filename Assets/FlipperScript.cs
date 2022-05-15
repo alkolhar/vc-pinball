@@ -9,6 +9,8 @@ public class FlipperScript : MonoBehaviour
     public float hitStrength = 10000f;
     public float flipperDamper = 150f;
 
+    private bool soundPlayed;
+
     HingeJoint hinge;
     JointSpring spring;
 
@@ -21,6 +23,7 @@ public class FlipperScript : MonoBehaviour
         hinge.useSpring = true;
 
         spring = new JointSpring();
+        soundPlayed = true;
     }
 
     // Update is called once per frame
@@ -32,7 +35,12 @@ public class FlipperScript : MonoBehaviour
 
         if (UnityEngine.Input.GetAxis(inputName) == 1) {
             spring.targetPosition = pressedPosition;
+            soundPlayed = false;
         } else {
+            if (!soundPlayed) {
+                GetComponent<AudioSource>().Play();
+                soundPlayed = true;
+            }
             spring.targetPosition = restPosition;
         }
 
