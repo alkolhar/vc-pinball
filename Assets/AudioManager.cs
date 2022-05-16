@@ -20,6 +20,8 @@ public class AudioManager : MonoBehaviour
         if (PlayerPrefs.HasKey("SFXVol")) {
             theMixer.SetFloat("SFXVol", PlayerPrefs.GetFloat("SFXVol")) ;
         }
+
+        GetComponent<AudioSource>().Play();
     }
 
 }

@@ -9,7 +9,9 @@ public class DespawnScript : MonoBehaviour
     public GameObject myBall;
     private Vector3 startVector;
     [SerializeField] private TextMeshProUGUI ballCountText;
+    [SerializeField] private TextMeshProUGUI newHighscore;
     [SerializeField] private GameObject goDialog;
+
     
     // Start is called before the first frame update
     void Start()
@@ -34,11 +36,17 @@ public class DespawnScript : MonoBehaviour
 
     void spawnBall() {
         if (Menu.instance.ballCount > 0) {
+            myBall.GetComponent<Rigidbody>().velocity = Vector3.zero;
             myBall.transform.position = startVector; // Set Ball to start position
             Menu.instance.multiplyer = 1; // Reset mulitplyer
             myBall.SetActive(true); // Show ball
         } else {
-            Debug.Log("TODO: GameOver routine!");
+            Color c = newHighscore.color;
+            if (Menu.instance.showHighscore) {
+                newHighscore.color = new Color(c.r, c.g, c.b, 1);
+            } else {
+                newHighscore.color = new Color(c.r, c.g, c.b, 0);
+            }
             goDialog.SetActive(true);
         }
     }

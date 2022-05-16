@@ -23,8 +23,8 @@ public class PlungerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        powerSlider.value = power;
         if (ballList.Count > 0) {
+            powerSlider.value = power;
             if (Input.GetKey(KeyCode.Space)) {
                 if (power <= maxPower) {
                     power += 500*Time.deltaTime;
@@ -33,6 +33,8 @@ public class PlungerScript : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.Space)) {
                 foreach(Rigidbody r in ballList) {
                     r.AddForce(power*Vector3.forward);
+                    // Play sound
+                    GetComponent<AudioSource>().Play();
                 }
             }
         } else {

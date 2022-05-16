@@ -10,12 +10,14 @@ public class Menu : MonoBehaviour
     public GameObject pauseMenu;
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI highscoreText;
-    public bool isPaused;
+    [SerializeField] private TextMeshProUGUI bonusScreen;
+    public bool isPaused, showBonus, showHighscore;
     public string mainMenuScene;
 
     public GameObject optionsScreen;
 
     public static Menu instance;
+    private float t = 0;
 
     private void Awake() {
         instance = this;
@@ -24,13 +26,17 @@ public class Menu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        highscore = PlayerPrefs.GetFloat("highscore", highscore);
-        highscoreText.text = "Highscore: " + highscore;
+        showHighscore = false;
+        if (highscoreText) {
+            highscore = PlayerPrefs.GetFloat(SceneManager.GetActiveScene().name + "-highscore", highscore);
+            highscoreText.text = "Highscore: " + highscore;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Check for interrupt
         if (Input.GetKeyDown(KeyCode.Escape)) {
             if (isPaused) {
                 ResumeGame();
@@ -41,12 +47,30 @@ public class Menu : MonoBehaviour
             }
         }
 
-        scoreText.text = "Score: " + score;
-        if (score > highscore) {
-            highscore = score;
-            highscoreText.text = "Highscore: " + highscore;
-        
-            PlayerPrefs.SetFloat("highscore", highscore);
+        // Update Score
+        if (scoreText) {
+            scoreText.text = "Score: " + score;
+            if (score > highscore) {
+                // Update Highscore
+                showHighscore = true;
+                highscore = score;
+                highscoreText.text = "Highscore: " + highscore;
+            
+                PlayerPrefs.SetFloat(SceneManager.GetActiveScene().name + "-highscore", highscore);
+            }
+        }
+
+        // Fade in/out Bonus screen
+        if (this.showBonus) {
+            Color c = bonusScreen.color;
+            if (t < 1){
+                bonusScreen.color = new Color(c.r, c.g, c.b, t);
+                t += Time.deltaTime;
+            } else {
+                bonusScreen.color = new Color(c.r, c.g, c.b, 0);
+                this.showBonus = false;
+                t = 0;
+            }
         }
     }
 
@@ -82,7 +106,6 @@ public class Menu : MonoBehaviour
     public float score = 0;
     public float highscore;
     public int ballCount = 3;
-    public float scorePerHit = 999;
     public int multiplyer = 1;
 
     public void decreaseBallCount() {
@@ -93,8 +116,8 @@ public class Menu : MonoBehaviour
         ballCount++;
     }
 
-    public void updateScore() {
-        score += multiplyer * scorePerHit;
+    public void updateScore(float gotScore) {
+        score += multiplyer * gotScore;
     }
 
     public void restartGame() {
@@ -102,4 +125,5 @@ public class Menu : MonoBehaviour
         ballCount = 3;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
 }

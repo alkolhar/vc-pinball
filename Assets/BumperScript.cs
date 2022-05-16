@@ -7,6 +7,7 @@ public class BumperScript : MonoBehaviour
 {
     public float force = 100.0f;
     public float forceRadius = 1.0f;
+    public int scorePerHit = 999;
     [SerializeField] private TextMeshProUGUI scoreText;
 
     void OnCollisionEnter() {
@@ -17,7 +18,7 @@ public class BumperScript : MonoBehaviour
                 // Add force
                 col.GetComponent<Rigidbody>().AddExplosionForce(force, transform.position, forceRadius);
                 // Add score
-                Menu.instance.updateScore();
+                Menu.instance.updateScore(scorePerHit);
             }
         }
     }
