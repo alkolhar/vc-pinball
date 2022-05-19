@@ -1,5 +1,9 @@
 # vc-pinball
-NTB computer science module for visual computing. The task is to create a pinball game with 3 different tables.
+NTB computer science module for visual computing. The task is to create a pinball game with Unity.
+
+## How to play
+If a ball is in the plunger, a slider is displayed on the right side of the screen. The space bar can be used to select the launch force. The longer you hold down the key, the more force will build up and thus speed the ball will experience.<br>
+To operate the flippers, use the A and L keys on your keyboard.
 
 ## Main menu
 ![Main menu screen](img/main_menu.png?raw=true "Main menu")
