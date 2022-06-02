@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1367
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 75663
+  controlID: 61
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 75664
+  controlID: 62
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 75665
+  controlID: 63
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -406,7 +406,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: d400fbff2a01fbffd007fbffd016fbff2e1afbff7c1afbff1a1bfbff3221fbffca2ffbff2032fbff7032fbff1639fbff1648fbff744bfbffc24bfbff604cfbff6c58fbffbc58fbff165efbff1a6dfbff7c70fbffcc70fbff6a71fbff4e76fbffda76fbff027efbff068dfbff6890fbffba90fbff5c91fbff7496fbffd496fbfff89dfbfff8acfbff56b0fbffa4b0fbff42b1fbff70d4fbffe2d4fbff36d5fbff4ed5fbff52d5fbff9cd5fbfffed5fbff24d6fbff74d6fbff9ad6fbffccd8fbfffad8fbff20d9fbff56d9fbfff214fcff5a15fcff8015fcff1416fcff4416fcff5816fcff2c1cfcff4a1cfcff4e1cfcff2c1dfcff541dfcff7c1dfcffa41dfcffcc1dfcfff41dfcff301efcff581efcff801efcffcc20fcfff020fcff1021fcffe222fcfffa22fcfffe22fcff1223fcff3823fcff6223fcff6423fcff4a27fcff3e28fcff8e28fcffe22dfcffe03cfcff3e40fcff8a40fcff2441fcff0e42fcff5e42fcff8049fcff7e58fcffe05bfcff2c5cfcffce5cfcff3669fcff5669fcff6869fcffd678fcffe87cfcff2e85fcff6094fcff0e98fcffae98fcffb099fcff3c9afcff84a0fcff6eb3fcffe0d2fcffe2d2fcff10d5fcff60d8fcffa0e7fcff8cedfcff9223fdff9623fdff4e2efdfffe3cfdffa43efdffc24cfdff3a93fdff3e93fdffe8e8fdff9ceafdff50f7fdff54f7fdff58f7fdff92f7fdff50fbfdff920bfefff011feff3422feff5e31feffc835feff1c44feff9445feff2a48feff6059feff1a5efefff46dfeff66d9feff7ad9feff82d9feff9cd9feffa0d9feff4adefeff4cdefeff62effeff1af7feff8e06ffffd20dffff301dffffa424ffff0834ffffc237ffff0447ffffbe4affffb068ffff2ebaffff32baffff54baffff58baffff3abbffff90bbffff26c9ffff28c9ffff82d8ffff08daffffb2e9ffff00ebffff3afbffff2a3301002e330100427f0100b2cf010038ea010026eb0100b8150200
+      m_ExpandedIDs: ccafffff1cb0ffffc2b6ffffc2c5ffff20c9ffff6ec9ffff0ccaffffc4d0ffff1cd1ffffc2d7ffffc2e6ffff20eaffff6eeaffff0cebffff3afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -778,22 +778,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/3DModels/Pinball Creator/Assets/Materials
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/3DModels/Pinball Creator/Assets/Materials
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\Repositories\vc-pinball
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 946b0000
-    m_LastClickedID: 27540
-    m_ExpandedIDs: 00000000166b0000186b00001a6b00001c6b00001e6b0000226b0000246b00002a6b00002c6b00002e6b0000306b0000326b0000346b0000366b0000386b00003a6b00003c6b0000426b0000be6b0000ea7000009a8e00009e8e0000aea80000b6a8000048cf0000ecba0100a838020000ca9a3bffffff7f
+    m_SelectedIDs: 8c6b0000
+    m_LastClickedID: 27532
+    m_ExpandedIDs: 000000008c6b00008e6b0000906b0000926b0000946b0000966b0000986b00009a6b00009c6b0000a06b0000a26b0000a46b0000a66b0000a86b0000aa6b0000ac6b0000ae6b0000b06b0000b26b0000b46b0000b66b0000b86b0000ba6b0000bc6b0000be6b0000466c0000ea7400007c7500008075000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -821,7 +821,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000166b0000186b00001a6b00001c6b00001e6b0000206b0000226b0000246b00002a6b00002c6b00002e6b0000306b0000326b0000346b0000386b00003a6b00003c6b0000426b0000946b0000c86b0000d6700000e6700000ea7000009a8e00009e8e0000b6a8000048cf0000ecba010000ca9a3bffffff7f
+    m_ExpandedIDs: 000000008c6b00008e6b0000906b0000926b0000946b0000966b0000986b00009a6b00009c6b00009e6b0000a06b0000a26b0000a46b0000a66b0000a86b0000aa6b0000ac6b0000ae6b0000b06b0000b26b0000b46b0000b66b0000b86b0000ba6b0000bc6b0000be6b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -848,7 +848,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300002065000032650000905b0000445e0000000000009a5e0000da5e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

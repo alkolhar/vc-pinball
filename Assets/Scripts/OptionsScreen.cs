@@ -68,12 +68,6 @@ public class OptionsScreen : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void ResLeft() {
         selectedResolution--;
         if (selectedResolution < 0) {
